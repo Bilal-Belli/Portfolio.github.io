@@ -1,0 +1,61 @@
+/*all of this icons , i chose the premary color that for all, and when hover each one display by its famous color*/
+.icons-light-github {
+   fill: #47d1ae;
+}
+
+.icons-light-facebook {
+   fill: #47d1ae;
+}
+
+.icons-light-linkedin {
+   fill: #47d1ae;
+}
+
+.icons-light-twitter {
+   fill: #47d1ae;
+}
+
+.icons-light-discord {
+   fill: #47d1ae;
+}
+
+.icons-light-email {
+   fill: #47d1ae;
+}
+
+/*here the original colors of social media icons (from google 2021)*/
+
+.icons-light-github:hover {
+   fill: #211F1F;
+   text-decoration: none;/*remove the underline link default css style*/
+}
+
+.icons-light-facebook:hover {
+   fill: #4267B2;
+   text-decoration: none;/*remove the underline link default css style*/
+}
+
+.icons-light-linkedin:hover {
+   fill: #0072b1;
+   text-decoration: none;/*remove the underline link default css style*/
+}
+
+.icons-light-twitter:hover {
+   fill: #1DA1F2;
+   text-decoration: none;/*remove the underline link default css style*/
+}
+
+.icons-light-discord:hover {
+   fill: #7289d9;
+   text-decoration: none;/*remove the underline link default css style*/
+}
+
+.icons-light-email:hover {
+   fill: #211F1F;
+   text-decoration: none;/*remove the underline link default css style*/
+}
+
+/*the color of service SVG icons*/
+.change_color {
+   fill: #47d1ae;
+}
