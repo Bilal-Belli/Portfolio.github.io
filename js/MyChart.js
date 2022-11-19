@@ -1,6 +1,6 @@
 //programming languages chart
 var xValuesPL = ["HTML", "CSS", "JavaScript", "Python", "Java", "C", "Pascal"];
-var yValuesPL = [100, 80, 60, 80, 50, 90, 70, 0];
+var yValuesPL = [99, 75, 90, 80, 60, 90, 80, 0];
 new Chart("ChartProgrammingLanguages", {
 	type: "horizontalBar",
 	data: {
