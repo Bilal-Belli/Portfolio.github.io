@@ -11,6 +11,10 @@
    fill: #47d1ae;
 }
 
+.icons-light-instagram {
+   fill: #47d1ae;
+}
+
 .icons-light-twitter {
    fill: #47d1ae;
 }
@@ -37,6 +41,11 @@
 
 .icons-light-linkedin:hover {
    fill: #0072b1;
+   text-decoration: none;/*remove the underline link default css style*/
+}
+
+.icons-light-instagram:hover {
+   fill: #bc1888;
    text-decoration: none;/*remove the underline link default css style*/
 }
 
