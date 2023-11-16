@@ -1,6 +1,6 @@
 //programming languages chart
-var xValuesPL = ["HTML", "CSS", "JavaScript", "Python", "Java", "C", "Pascal"];
-var yValuesPL = [99, 75, 90, 80, 60, 90, 80, 0];
+var xValuesPL = ["HTML", "CSS", "JavaScript", "Python", "Java", "C", "Pascal", "C#"];
+var yValuesPL = [99, 75, 90, 80, 70, 90, 80, 50, 0];
 new Chart("ChartProgrammingLanguages", {
 	type: "horizontalBar",
 	data: {
@@ -28,8 +28,8 @@ new Chart("ChartProgrammingLanguages", {
 });
 //--------------------------------------------
 //skills chart
-var xValuesSK = ["Web Developper", "Analyst", "Blogger", "Architecter", "Mobile Developper", "Designer"];
-var yValuesSK = [80, 80, 70, 70, 20, 80];
+var xValuesSK = ["Web Developper", "Analyst", "Blogger", "Architect", "Mobile Developper", "Designer"];
+var yValuesSK = [80, 80, 90, 75, 50, 95];
 new Chart("ChartSkills", {
 	type: "radar",
 	data: {

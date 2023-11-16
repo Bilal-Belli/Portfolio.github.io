@@ -7,6 +7,10 @@
    fill: #47d1ae;
 }
 
+.icons-light-whatsapp {
+   fill: #47d1ae;
+}
+
 .icons-light-linkedin {
    fill: #47d1ae;
 }
@@ -35,7 +39,7 @@
 }
 
 .icons-light-facebook:hover {
-   fill: #4267B2;
+   fill: #1877F2;
    text-decoration: none;/*remove the underline link default css style*/
 }
 
@@ -50,7 +54,7 @@
 }
 
 .icons-light-twitter:hover {
-   fill: #1DA1F2;
+   fill: #000000;
    text-decoration: none;/*remove the underline link default css style*/
 }
 
@@ -61,6 +65,11 @@
 
 .icons-light-email:hover {
    fill: #211F1F;
+   text-decoration: none;/*remove the underline link default css style*/
+}
+
+.icons-light-whatsapp:hover {
+   fill: #075e54;
    text-decoration: none;/*remove the underline link default css style*/
 }
 

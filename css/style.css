@@ -995,7 +995,7 @@ h5,
 }
 
 .section-title {
-  font-size: 3rem;
+  font-size: 2rem;
   color: #000;
   margin-bottom: 1.8rem;
   font-weight: 900;
@@ -1004,7 +1004,7 @@ h5,
 
 @media (max-width: 991.98px) {
   .section-title {
-    font-size: 1.5rem;
+    font-size: 0.8rem;
   }
 }
 
@@ -1260,4 +1260,19 @@ h5,
 }
 #contact-me_section .card:hover svg,#contact-me_section .card:hover h4{
   color: #47d1ae;
+}
+
+.image-container {
+  position: relative;
+  display: inline-block;
+}
+
+.image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  pointer-events: none;
 }
