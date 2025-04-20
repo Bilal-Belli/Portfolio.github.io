@@ -29,7 +29,7 @@ new Chart("ChartProgrammingLanguages", {
 //--------------------------------------------
 //skills chart
 var xValuesSK = ["Web Developper", "Analyst", "Project Management", "Architect", "Mobile Developper", "Designer"];
-var yValuesSK = [80, 80, 90, 80, 40, 90];
+var yValuesSK = [80, 80, 90, 80, 60, 90];
 new Chart("ChartSkills", {
 	type: "radar",
 	data: {
