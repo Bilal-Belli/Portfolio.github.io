@@ -3,7 +3,7 @@
 # Allow all crawlers full access
 User-agent: *
 Allow: /
-Allow: /Documents/   # optional: keep CVs indexed
+Allow: /documents/   # optional: keep CVs indexed
 
 # Disallow specific technical folders (if you don’t want them indexed)
 Disallow: /css/
