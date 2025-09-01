@@ -1276,3 +1276,39 @@ h5,
   background: transparent;
   pointer-events: none;
 }
+
+/* Let all the footer elements stay inline when the size of screen is for a mobile */
+@media screen and (max-width: 767px) {
+  .footer-section .row.justify-content-md-center {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    justify-content: center !important;
+  }
+  .footer-section .col-md-1 {
+    flex: 0 1 auto !important;
+    max-width: none !important;
+    width: auto !important;
+  }
+}
+
+/* Same but for Contact-me section */
+@media screen and (max-width: 767px) {
+  #contact-me_section {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    gap: 12px;
+  }
+  #contact-me_section > .col-sm-4 {
+    flex: 0 1 45% !important;
+    max-width: 180px !important;
+    width: 100% !important;
+  }
+  #contact-me_section .card {
+    max-width: 170px !important;
+    min-width: 140px !important;
+    margin: auto;
+  }
+}
