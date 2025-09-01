@@ -3,12 +3,13 @@
 # Allow all crawlers full access
 User-agent: *
 Allow: /
+Allow: /Documents/   # optional: keep CVs indexed
 
 # Disallow specific technical folders (if you don’t want them indexed)
 Disallow: /css/
 Disallow: /js/
 Disallow: /assets/
-Disallow: /Documents/   # optional: if you prefer to keep CVs unindexed
+
 
 # Sitemap location
 Sitemap: https://bilalbelli.tech/sitemap.xml
