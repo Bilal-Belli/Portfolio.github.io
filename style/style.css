@@ -1312,3 +1312,21 @@ h5,
     margin: auto;
   }
 }
+
+.nonloop-block-132 .work-thumb {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 200px;           /* fixed card height */
+  overflow: hidden;
+  background: #ffffff;
+}
+
+.nonloop-block-132 .work-thumb img {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;     /* keep full image, no zoom */
+  display: block;
+}
