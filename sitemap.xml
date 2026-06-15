@@ -2,22 +2,80 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-  <!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
 
   <url>
     <loc>https://bilalbelli.eu/</loc>
-    <lastmod>2025-09-01T13:54:41+00:00</lastmod>
+    <lastmod>2026-06-15T13:54:41+00:00</lastmod>
     <priority>1.00</priority>
   </url>
   <url>
-    <loc>https://bilalbelli.eu/documents/Bilal_Belli_CV_EN.pdf</loc>
-    <lastmod>2025-09-01T13:54:41+00:00</lastmod>
+    <loc>https://bilalbelli.eu/#</loc>
+    <lastmod>2026-06-15T13:54:41+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://bilalbelli.eu/#about-me_section</loc>
+    <lastmod>2026-06-15T13:54:41+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://bilalbelli.eu/#experiance_section</loc>
+    <lastmod>2026-06-15T13:54:41+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://bilalbelli.eu/#projects_section</loc>
+    <lastmod>2026-06-15T13:54:41+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://bilalbelli.eu/#certificates_section</loc>
+    <lastmod>2026-06-15T13:54:41+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://bilalbelli.eu/#services_section</loc>
+    <lastmod>2026-06-15T13:54:41+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://bilalbelli.eu/#contact-me_section</loc>
+    <lastmod>2026-06-15T13:54:41+00:00</lastmod>
     <priority>0.80</priority>
   </url>
   <url>
     <loc>https://bilalbelli.eu/documents/Bilal_Belli_CV_FR.pdf</loc>
-    <lastmod>2025-09-01T13:54:41+00:00</lastmod>
+    <lastmod>2026-06-15T13:54:41+00:00</lastmod>
     <priority>0.80</priority>
   </url>
-
+  <url>
+    <loc>https://bilalbelli.eu/documents/Bilal_Belli_CV_EN.pdf</loc>
+    <lastmod>2026-06-15T13:54:41+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://www.linkedin.com/in/belli-bilal/</loc>
+    <lastmod>2026-06-15T13:54:41+00:00</lastmod>
+    <priority>0.60</priority>
+  </url>
+  <url>
+    <loc>https://discordapp.com/users/722045011700744255</loc>
+    <lastmod>2026-06-15T13:54:41+00:00</lastmod>
+    <priority>0.60</priority>
+  </url>
+  <url>
+    <loc>https://www.instagram.com/bilal_belli__/</loc>
+    <lastmod>2026-06-15T13:54:41+00:00</lastmod>
+    <priority>0.60</priority>
+  </url>
+  <url>
+    <loc>https://twitter.com/bilal_belli_</loc>
+    <lastmod>2026-06-15T13:54:41+00:00</lastmod>
+    <priority>0.60</priority>
+  </url>
+  <url>
+    <loc>https://github.com/Bilal-Belli</loc>
+    <lastmod>2026-06-15T13:54:41+00:00</lastmod>
+    <priority>0.60</priority>
+  </url>
 </urlset>

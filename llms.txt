@@ -1,0 +1,28 @@
+# Bilal Belli
+
+Software Engineer specializing in:
+- DevOps CI/CD
+- Java Spring Boot
+- Angular
+- Web Developpement Node.js ExpressJs Javascript Typescript Bootstrap Python Flask
+- Azure Cloud, GCP, Azure DevOps, Jenkins, Ansible, Docker, Kubernetes, Gradle, Maven
+- Postman, SonarQube, DevTools, Playwright, Robot Framework, JUnit, Pytest, DNS, IP, DHCP, Networking
+
+Based in France, available in Montpellier, Paris, ile de france, Nantes, Toulouse, Lyon, Grenoble
+
+Main pages:
+https://bilalbelli.eu/
+https://bilalbelli.eu/#
+https://bilalbelli.eu/#about-me_section
+https://bilalbelli.eu/#experiance_section
+https://bilalbelli.eu/#projects_section
+https://bilalbelli.eu/#certificates_section
+https://bilalbelli.eu/#services_section
+https://bilalbelli.eu/#contact-me_section
+https://bilalbelli.eu/documents/Bilal_Belli_CV_FR.pdf
+https://bilalbelli.eu/documents/Bilal_Belli_CV_EN.pdf
+https://www.linkedin.com/in/belli-bilal/
+https://discordapp.com/users/722045011700744255
+https://www.instagram.com/bilal_belli__/
+https://twitter.com/bilal_belli_
+https://github.com/Bilal-Belli
