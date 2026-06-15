@@ -1,4 +1,4 @@
-# robots.txt for https://bilalbelli.tech/
+# robots.txt for https://bilalbelli.eu/
 
 # Allow all crawlers full access
 User-agent: *
@@ -12,4 +12,4 @@ Disallow: /assets/
 
 
 # Sitemap location
-Sitemap: https://bilalbelli.tech/sitemap.xml
+Sitemap: https://bilalbelli.eu/sitemap.xml
