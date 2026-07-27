@@ -12,13 +12,15 @@ Based in France, available in Montpellier, Paris, ile de france, Nantes, Toulous
 
 Main pages:
 https://bilalbelli.eu/
+https://bilalbelli.eu/certificates.html
+https://bilalbelli.eu/projects.html
 https://bilalbelli.eu/#
-https://bilalbelli.eu/#about-me_section
+https://bilalbelli.eu/#about
 https://bilalbelli.eu/#experiance_section
-https://bilalbelli.eu/#projects_section
+https://bilalbelli.eu/#projects
 https://bilalbelli.eu/#certificates_section
-https://bilalbelli.eu/#services_section
-https://bilalbelli.eu/#contact-me_section
+https://bilalbelli.eu/#services
+https://bilalbelli.eu/#contact-me
 https://bilalbelli.eu/documents/Bilal_Belli_CV_FR.pdf
 https://bilalbelli.eu/documents/Bilal_Belli_CV_EN.pdf
 https://www.linkedin.com/in/belli-bilal/
