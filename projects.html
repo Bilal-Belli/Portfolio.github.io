@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bilal Belli · projects</title>
+    <!-- Bootstrap 5 + icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap"
+        rel="stylesheet">
+    <style>
+        /* ----- same custom palette & reset ----- */
+        :root {
+            --bb-white: #ffffff;
+            --bb-light: #f8fafc;
+            --bb-deep: #0a979e;
+            --bb-dark: #1e293b;
+            --bb-gray: #e9edf2;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: var(--bb-white);
+            color: var(--bb-dark);
+            scroll-behavior: smooth;
+        }
+
+        .bg-light-custom {
+            background: var(--bb-light);
+        }
+
+        .bg-teal {
+            background: var(--bb-deep);
+        }
+
+        .text-teal {
+            color: var(--bb-deep);
+        }
+
+        .text-deep {
+            color: var(--bb-deep);
+        }
+
+        .border-deep {
+            border-color: var(--bb-deep);
+        }
+
+        /* navbar */
+        .navbar-brand {
+            font-weight: 700;
+            color: var(--bb-deep);
+            letter-spacing: -0.3px;
+        }
+
+        .navbar-brand:hover {
+            color: var(--bb-deep);
+        }
+
+        .nav-link {
+            font-weight: 500;
+            color: var(--bb-dark);
+            transition: 0.2s;
+        }
+
+        .nav-link:hover {
+            color: var(--bb-deep);
+        }
+
+        .btn-outline-deep {
+            border: 1.5px solid var(--bb-deep);
+            color: var(--bb-deep);
+            border-radius: 40px;
+            padding: 0.35rem 1.2rem;
+            font-weight: 500;
+            transition: 0.25s;
+        }
+
+        .btn-outline-deep:hover {
+            background: var(--bb-deep);
+            color: white;
+        }
+
+        .btn-deep {
+            background: var(--bb-deep);
+            color: white;
+            border-radius: 40px;
+            padding: 0.4rem 1.5rem;
+            font-weight: 500;
+            border: none;
+            transition: 0.25s;
+        }
+
+        .btn-deep:hover {
+            background: #087a80;
+            color: white;
+        }
+
+        /* section titles */
+        .section-title {
+            font-weight: 700;
+            font-size: 2rem;
+            letter-spacing: -0.02em;
+            border-left: 5px solid var(--bb-deep);
+            padding-left: 1rem;
+        }
+
+        .section-sub {
+            color: #475569;
+            max-width: 640px;
+        }
+
+        /* category pills */
+        .category-pill {
+            background: var(--bb-light);
+            border: 1px solid #dce2ea;
+            border-radius: 60px;
+            padding: 0.45rem 1.5rem;
+            font-weight: 500;
+            font-size: 0.9rem;
+            color: var(--bb-dark);
+            cursor: pointer;
+            transition: 0.2s;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.02);
+            display: inline-block;
+        }
+
+        .category-pill.active,
+        .category-pill:hover {
+            background: var(--bb-deep);
+            color: white;
+            border-color: var(--bb-deep);
+        }
+
+        /* project card */
+        .project-card {
+            background: white;
+            border-radius: 20px;
+            padding: 1.5rem 1.25rem;
+            box-shadow: 0 6px 18px rgba(10, 151, 158, 0.06), 0 2px 6px rgba(0, 0, 0, 0.02);
+            border: 1px solid rgba(71, 209, 174, 0.15);
+            transition: all 0.2s ease;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .project-card:hover {
+            transform: translateY(-4px);
+            border-color: var(--bb-deep);
+            box-shadow: 0 16px 32px rgba(10, 151, 158, 0.10);
+        }
+
+        .project-card h5 {
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: var(--bb-dark);
+        }
+
+        .project-card .badge {
+            font-weight: 500;
+            background: var(--bb-light);
+            color: #1e293b;
+            border: 1px solid #e2e8f0;
+            border-radius: 40px;
+            padding: 0.3rem 0.9rem;
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 0.02em;
+        }
+
+        .project-card .badge.bg-deep {
+            background: var(--bb-deep);
+            color: white;
+            border-color: var(--bb-deep);
+        }
+
+        .project-card .badge.bg-teal-light {
+            background: #d4f3e9;
+            color: #096b6f;
+            border-color: #b3e6d6;
+        }
+
+        .project-links a {
+            color: var(--bb-deep);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.85rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            transition: 0.15s;
+            border-radius: 30px;
+            padding: 0.2rem 0.7rem;
+            background: rgba(10, 151, 158, 0.05);
+        }
+
+        .project-links a:hover {
+            background: var(--bb-deep);
+            color: white;
+        }
+
+        /* filter row */
+        .filter-scroll {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.6rem 0.8rem;
+            margin-bottom: 2rem;
+        }
+
+        /* footer */
+        .footer {
+            background: var(--bb-light);
+            border-top: 1px solid #e2e8f0;
+            padding: 2.5rem 0;
+        }
+
+        .footer a {
+            color: var(--bb-deep);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .footer a:hover {
+            color: #065b60;
+        }
+
+        /* extra spacing */
+        .py-section {
+            padding: 3.5rem 0;
+        }
+
+        @media (max-width: 768px) {
+            .section-title {
+                font-size: 1.7rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ===== NAVBAR ===== -->
+    <nav class="navbar navbar-expand-lg bg-white border-bottom py-2 sticky-top shadow-sm"
+        style="border-color: #e9edf2 !important;">
+        <div class="container">
+            <a class="navbar-brand" href="#">Bilal Belli</a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
+                data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center gap-1">
+                    <li class="nav-item ms-2"><a class="btn btn-deep btn-sm" href="/index.html">Go Back</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ===== PROJECTS SECTION ===== -->
+    <section id="projects" class="py-section">
+        <div class="container">
+            <div class="row mb-4">
+                <div class="col-lg-10">
+                    <h2 class="section-title">Projects</h2>
+                </div>
+            </div>
+
+            <!-- categories filter -->
+            <div id="categories" class="filter-scroll">
+                <!-- Will be dynamically generated -->
+            </div>
+
+            <!-- project grid -->
+            <div class="row g-4" id="projectGrid">
+                <!-- Will be dynamically generated -->
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container text-center text-secondary small">
+            <span>© 2026 Bilal Belli</span>
+        </div>
+    </footer>
+
+    <!-- ===== DYNAMIC SCRIPT ===== -->
+    <script>
+        (function() {
+            // ==================== DATA ====================
+            const projectsData = [
+                {
+                    id: 1,
+                    title: "LLM Summarization",
+                    description: "Web app that uses Gemini &amp; Ollama to discuss document annotations and generate concise summaries.",
+                    category: "ai",
+                    tags: ["Python", "Gemini", "Ollama"],
+                    links: {
+                        github: "https://github.com/Bilal-Belli/PDFsummaryByLLM"
+                    },
+                    type: "AI / ML"
+                },
+                {
+                    id: 2,
+                    title: "Library System",
+                    description: "JavaFX desktop app for library management (CRUD, adherents, penalties).",
+                    category: "desktop",
+                    tags: ["Java", "JavaFX"],
+                    links: {
+                        github: "https://github.com/Bilal-Belli/SGEB-Library-Management-System"
+                    },
+                    type: "Desktop"
+                },
+                {
+                    id: 3,
+                    title: "RpaintersLLC Redesign",
+                    description: "Freelance website redesign from NetworkSolutions to modern web technologies.",
+                    category: "web",
+                    tags: ["HTML", "CSS", "JavaScript"],
+                    links: {
+                        github: "https://github.com/Bilal-Belli/rpaintersllc-redesign",
+                        demo: "https://rpaintersllc.com/"
+                    },
+                    type: "Web App"
+                },
+                {
+                    id: 4,
+                    title: "MRI-Reconstruction-MoDL",
+                    description: "Python deep learning proof of concept for fast MRI reconstruction.",
+                    category: "ai",
+                    tags: ["Python", "Deep Learning"],
+                    links: {
+                        github: "https://github.com/Bilal-Belli/MRI-Reconstruction-MoDL"
+                    },
+                    type: "AI / ML"
+                },
+                {
+                    id: 5,
+                    title: "iOS Analyser",
+                    description: "Automated detection of malicious behaviors on iOS apps via binary code analysis (Radare2, otool).",
+                    category: "desktop",
+                    tags: ["Python", "ARMv8", "Assembly"],
+                    links: {
+                        github: "https://github.com/Bilal-Belli/iOSApplicationsAnalyser"
+                    },
+                    type: "Desktop"
+                },
+                {
+                    id: 6,
+                    title: "Trendly",
+                    description: "Trending platform to stay up to date with popular repos, tech news, and tips.",
+                    category: "web",
+                    tags: ["Node.js", "Vue.js", "Tailwind CSS"],
+                    links: {
+                        github: "https://github.com/Bilal-Belli/Trendly"
+                    },
+                    type: "Web App"
+                },
+                {
+                    id: 7,
+                    title: "Notely",
+                    description: "Productivity desktop software with smart keynote, notes, and diagrams.",
+                    category: "desktop",
+                    tags: ["JavaScript", "Electron", "Bootstrap"],
+                    links: {
+                        github: "https://github.com/Bilal-Belli/Notely"
+                    },
+                    type: "Desktop"
+                },
+                {
+                    id: 8,
+                    title: "YouTube Downloader",
+                    description: "Python Tkinter app using Pytube to download videos and audio.",
+                    category: "desktop",
+                    tags: ["Python", "Tkinter"],
+                    links: {
+                        github: "https://github.com/Bilal-Belli/YoutubeDownloader"
+                    },
+                    type: "Desktop"
+                },
+                {
+                    id: 9,
+                    title: "Web Media Player",
+                    description: "Schedule and display media elements with custom timing (ad banner style).",
+                    category: "web",
+                    tags: ["Node.js", "Bootstrap"],
+                    links: {
+                        github: "https://github.com/Bilal-Belli/MediaPlayer"
+                    },
+                    type: "Web App"
+                },
+                {
+                    id: 10,
+                    title: "PDF Template Render",
+                    description: "Flask web app that fills PDF templates with dynamic data from CSV.",
+                    category: "web",
+                    tags: ["Flask", "Bootstrap", "JavaScript"],
+                    links: {
+                        github: "https://github.com/Bilal-Belli/pdfTemplateRender"
+                    },
+                    type: "Web App"
+                },
+                {
+                    id: 11,
+                    title: "Internship - HR Web App",
+                    description: "Web App designed for HR department.",
+                    category: "web",
+                    tags: ["Express", "MySQL", "Bootstrap"],
+                    links: {
+                        github: "https://github.com/Bilal-Belli/InternshipDRHwebApplication"
+                    },
+                    type: "Web App"
+                },
+                {
+                    id: 12,
+                    title: "NetFilter",
+                    description: "NetFilter is a professional, high-performance browser extension developed to block access to distraction-heavy and harmful websites, helping you keep your focus and maintain a healthy digital life.",
+                    category: "extension",
+                    tags: ["JavaScript", "Chrome API"],
+                    links: {
+                        github: "https://github.com/Bilal-Belli/NetFilter",
+                        demo: "https://chromewebstore.google.com/detail/netfilter/abiojoffmcaiklldhikeonhdlpbnfalj"
+                    },
+                    type: "Chrome Extension"
+                },
+                {
+                    id: 13,
+                    title: "Pro Agreement Contract Generator",
+                    description: "I built a Google Chrome extension that lets you generate professional, signature-ready agreements right from your browser's side panel in under 30 seconds.",
+                    category: "extension",
+                    tags: ["JavaScript", "Chrome API"],
+                    links: {
+                        github: "https://github.com/Bilal-Belli/ChromeExtension-Agreements-Contract-Generator",
+                        demo: "https://chromewebstore.google.com/detail/pro-agreement-contract-ge/gkpmngbacmnimlkabohlkgenmollamkf"
+                    },
+                    type: "Chrome Extension"
+                },
+                {
+                    id: 14,
+                    title: "Minecraft Cursor",
+                    description: "Transform your browsing experience with 700+ Minecraft-themed cursors !",
+                    category: "extension",
+                    tags: ["JavaScript", "Chrome API"],
+                    links: {
+                        github: "https://github.com/Bilal-Belli/Minecraft-Cursor---Chrome-Extension",
+                        demo: "https://chromewebstore.google.com/detail/minecraft-cursor/mhklmcbhijokcbepdmhimapannaonfdj"
+                    },
+                    type: "Chrome Extension"
+                },
+                {
+                    id: 15,
+                    title: "Quiz Mobile App",
+                    description: "An interactive quiz mobile app.",
+                    category: "mobile",
+                    tags: ["Flutter"],
+                    links: {
+                        github: "https://github.com/Bilal-Belli/Quiz-Mobile-App"
+                    },
+                    type: "Mobile App"
+                },
+                {
+                    id: 16,
+                    title: "CMS Redesign",
+                    description: "Redesigned the content management system, including both the administration panel and the final user interface.",
+                    category: "web",
+                    tags: ["Express", "MySQL", "Tailwind CSS"],
+                    links: {
+                        github: "https://github.com/Bilal-Belli/CMS-Redesign-Norahalebooks",
+                        demo: "https://norahalebooks.com/"
+                    },
+                    type: "Web App"
+                },
+                {
+                    id: 17,
+                    title: "Share This Page",
+                    description: "A Chrome extension that lets you share any web page across 30+ platforms with one click.",
+                    category: "extension",
+                    tags: ["JavaScript", "Chrome API"],
+                    links: {
+                        github: "https://github.com/Bilal-Belli/Chrome-Extention-ShareThisPage"
+                    },
+                    type: "Chrome Extension"
+                },
+                {
+                    id: 18,
+                    title: "Smart-WoT-TD-Generator",
+                    description: "An AI powered Smart Web of Things (WoT) Thing Description (TD) Generator & RAG Search System.",
+                    category: "ai",
+                    tags: ["Python", "RAG", "LLM", "NodeJS"],
+                    links: {
+                        github: "https://github.com/Bilal-Belli/Smart-WoT-TD-Generator"
+                    },
+                    type: "AI / IoT / WoT"
+                },
+                {
+                    id: 19,
+                    title: "ProtoGenV2",
+                    description: "A tool that allows you to generate gRPC domain conversion classes (gRPC classes, conversion methods to Grpc() and from Grpc()).",
+                    category: "poc",
+                    tags: ["Java", "Gradle"],
+                    links: {
+                        github: "https://github.com/Bilal-Belli/ProtoGenV2"
+                    },
+                    type: "Proof of Concept"
+                },
+                {
+                    id: 20,
+                    title: "PDF Auto Fill Tool",
+                    description: "A tool developed for a client to help them automate the filling in of certain repetitive fields in their legal contracts.",
+                    category: "web",
+                    tags: ["Python", "Deep Learning"],
+                    links: {
+                        github: "https://github.com/Bilal-Belli/pdfAutoFill-Andrew"
+                    },
+                    type: "Scripting"
+                },
+                {
+                    id: 21,
+                    title: "SpringControllersAnalyzer",
+                    description: "This is a java maven dependency / tool that allows finding and extracting DTOs (Data Transfer Objects) in a given java project code source path.",
+                    category: "poc",
+                    tags: ["Java", "Maven"],
+                    links: {
+                        github: "https://github.com/Bilal-Belli/SpringControllersAnalyzer"
+                    },
+                    type: "Proof of Concept"
+                },
+                {
+                    id: 22,
+                    title: "Pojo2ProtoV2",
+                    description: "This is a Java Maven dependency / tool that allows you to process the conversion of a specific POJO class into its Protobuf message structure, generating a *.proto file.",
+                    category: "poc",
+                    tags: ["Java", "Maven"],
+                    links: {
+                        github: "https://github.com/Bilal-Belli/Pojo2ProtoV2"
+                    },
+                    type: "Proof of Concept"
+                },
+                {
+                    id: 23,
+                    title: "Java Classes Clustering",
+                    description: "This is a tool that allows you to cluster classes in a java project with a criteria.",
+                    category: "poc",
+                    tags: ["Java", "Maven"],
+                    links: {
+                        github: "https://github.com/Bilal-Belli/JavaClassesClustering"
+                    },
+                    type: "Proof of Concept"
+                },
+                {
+                    id: 24,
+                    title: "QCM website Generator",
+                    description: "Java project that uses various MDE (Model-Driven Engineering) tools to automate the generation of a QCM (multiple-choice questionnaire) website based on a very simplified human language.",
+                    category: "poc",
+                    tags: ["Java", "MDE"],
+                    links: {
+                        github: "https://github.com/Bilal-Belli/QCMwebsiteGenerator"
+                    },
+                    type: "Model Drive Engineering"
+                },
+                {
+                    id: 25,
+                    title: "Weather Mobile App",
+                    description: "An interactive mobile weather application allowing users to search for their cities and view the week's weather.",
+                    category: "mobile",
+                    tags: ["Flutter"],
+                    links: {
+                        github: "https://github.com/Bilal-Belli/Weather-Mobile-App"
+                    },
+                    type: "Mobile App"
+                },
+                {
+                    id: 26,
+                    title: "Dictionary Wifi Attack",
+                    description: "This repository presents a simple Python program for testing a large number of passwords (dictionary) to connect to a WiFi network.",
+                    category: "desktop",
+                    tags: ["Python", "Tkinter"],
+                    links: {
+                        github: "https://github.com/Bilal-Belli/DictionaryWifiAttackTool"
+                    },
+                    type: "Desktop"
+                },
+                {
+                    id: 27,
+                    title: "Emoji Desktop Keyboard",
+                    description: "This is a desktop python program that allows you to select, copy and use emojis. (it includes the specific icon of the emoji in the keyboard, also it includes the most available emojis about 1600).",
+                    category: "desktop",
+                    tags: ["Python", "Tkinter"],
+                    links: {
+                        github: "https://github.com/Bilal-Belli/EmojiDesktopKeyboard"
+                    },
+                    type: "Desktop"
+                },
+                {
+                    id: 28,
+                    title: "FilesConv",
+                    description: "This is a python desktop program that allows you to select multiple files of the same format (Word-Excel-PPT-TXT), and convert them to PDF files in a specific path on your desktop.",
+                    category: "desktop",
+                    tags: ["Python", "Tkinter"],
+                    links: {
+                        github: "https://github.com/Bilal-Belli/FilesConv"
+                    },
+                    type: "Desktop"
+                },
+                {
+                    id: 29,
+                    title: "ScRecor",
+                    description: "This repository presents a simple Python script for screen recording.",
+                    category: "desktop",
+                    tags: ["Python", "Tkinter"],
+                    links: {
+                        github: "https://github.com/Bilal-Belli/ScRecor-ScreenRecorder"
+                    },
+                    type: "Desktop"
+                },
+                {
+                    id: 30,
+                    title: "Alphabet Recognizer CNN",
+                    description: "This repository contains a classification model made by python for Arabic Alphabet Detection.",
+                    category: "ai",
+                    tags: ["Python", "Deep Learning"],
+                    links: {
+                        github: "https://github.com/Bilal-Belli/ArabicAlphabetRecognizerCNN"
+                    },
+                    type: "AI / ML"
+                },
+                {
+                    id: 31,
+                    title: "Bin Packing Problem",
+                    description: "This repository serves as a comprehensive collection of solutions and implementations for the Bin Packing 1D problem.",
+                    category: "poc",
+                    tags: ["Python", "Tkinter", "Optimization"],
+                    links: {
+                        github: "https://github.com/Bilal-Belli/BinPackingProblem"
+                    },
+                    type: "Proof of Concept"
+                },
+                {
+                    id: 32,
+                    title: "Diabetic Retinopathy Classification",
+                    description: "This repository contains a classification model made by Matlab for Diabetic Retinopathy Detection.",
+                    category: "ai",
+                    tags: ["Python", "Deep Learning"],
+                    links: {
+                        github: "https://github.com/Bilal-Belli/DiabeticRetinopathy_ClassificationModel_CNN"
+                    },
+                    type: "AI / ML"
+                }
+            ];
+
+            // ==================== RENDER FUNCTIONS ====================
+            
+            // Get unique categories from data
+            function getCategories() {
+                const categories = new Set();
+                projectsData.forEach(project => categories.add(project.category));
+                return ['all', ...Array.from(categories)];
+            }
+
+            // Render category filter buttons
+            function renderCategories() {
+                const container = document.getElementById('categories');
+                const categories = getCategories();
+                
+                const categoryNames = {
+                    'all': 'All',
+                    'web': 'Web Apps',
+                    'desktop': 'Desktop Apps',
+                    'extension': 'Chrome Extensions',
+                    'mobile': 'Mobile Apps',
+                    'poc': 'Proof of Concepts',
+                    'ai': 'AI / ML'
+                };
+
+                container.innerHTML = categories.map(cat => 
+                    `<button class="category-pill ${cat === 'all' ? 'active' : ''}" data-filter="${cat}">
+                        ${categoryNames[cat] || cat.charAt(0).toUpperCase() + cat.slice(1)}
+                    </button>`
+                ).join('');
+            }
+
+            // Render project cards
+            function renderProjects(category = 'all') {
+                const grid = document.getElementById('projectGrid');
+                
+                const filteredProjects = category === 'all' 
+                    ? projectsData 
+                    : projectsData.filter(p => p.category === category);
+
+                if (filteredProjects.length === 0) {
+                    grid.innerHTML = `
+                        <div class="col-12 text-center py-5">
+                            <p class="text-muted">No projects found in this category.</p>
+                        </div>
+                    `;
+                    return;
+                }
+
+                grid.innerHTML = filteredProjects.map(project => {
+                    // Generate tags HTML
+                    const tagsHtml = project.tags.map(tag => 
+                        `<span class="badge">${tag}</span>`
+                    ).join('');
+
+                    // Generate links HTML
+                    const linksHtml = Object.entries(project.links).map(([key, url]) => {
+                        const icon = key === 'github' ? 'bi-github' : 'bi-play-circle';
+                        const label = key === 'github' ? 'GitHub' : 
+                                     key === 'demo' ? 'Demo' : key.charAt(0).toUpperCase() + key.slice(1);
+                        return `<a href="${url}"><i class="bi ${icon} me-1"></i> ${label}</a>`;
+                    }).join('');
+
+                    return `
+                        <div class="col-lg-4 col-md-6 project-item" data-category="${project.category}">
+                            <div class="project-card">
+                                <h5>${project.title}</h5>
+                                <p class="text-secondary small" style="flex:1;">${project.description}</p>
+                                <div class="mb-2">
+                                    ${tagsHtml}
+                                </div>
+                                <div class="project-links">
+                                    ${linksHtml}
+                                </div>
+                                <small class="text-uppercase text-muted mt-1" style="font-size:0.6rem;letter-spacing:0.04em;">
+                                    ${project.type}
+                                </small>
+                            </div>
+                        </div>
+                    `;
+                }).join('');
+            }
+
+            // ==================== FILTER LOGIC ====================
+            function setupFiltering() {
+                const filterButtons = document.querySelectorAll('.category-pill');
+                
+                filterButtons.forEach(btn => {
+                    btn.addEventListener('click', function(e) {
+                        // Update active class
+                        filterButtons.forEach(b => b.classList.remove('active'));
+                        this.classList.add('active');
+                        
+                        const filter = this.getAttribute('data-filter');
+                        renderProjects(filter);
+                    });
+                });
+            }
+
+            // ==================== INIT ====================
+            function init() {
+                renderCategories();
+                renderProjects('all');
+                setupFiltering();
+            }
+
+            // Run when DOM is ready
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', init);
+            } else {
+                init();
+            }
+
+        })();
+    </script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
