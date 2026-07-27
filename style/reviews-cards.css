@@ -88,9 +88,9 @@
     width: 44px;
     height: 44px;
     border-radius: 50%;
-    border: 1px solid #d0d0d0;
+    border: 0.2px solid #d0d0d0;
     background-color: #ffffff;
-    color: #333333;
+    color: #076b70;
     cursor: pointer;
     transition: all 0.2s ease;
 
@@ -111,9 +111,9 @@
 }
 
 .nav-btn:hover {
-    background-color: #111111;
+    background-color: #076b70;
     color: #ffffff;
-    border-color: #111111;
+    border-color: #076b70;
 }
 
 .nav-btn:hover svg {
