@@ -333,6 +333,7 @@ h5,
 }
 
 @media (max-width: 991.98px) {
+
   .display-1,
   .display-3 {
     font-size: 3rem;
@@ -939,9 +940,9 @@ h5,
   position: absolute;
   right: 10%;
   top: 50%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
+  -webkit-transform: translateY(-60%);
+  -ms-transform: translateY(-60%);
+  transform: translateY(-60%);
 }
 
 .img-absolute img {
@@ -952,7 +953,13 @@ h5,
 
 @media (max-width: 991.98px) {
   .img-absolute img {
-    max-width: 100%;
+    display: none; 
+  }
+}
+
+@media (max-width: 767.98px) {
+  .img-absolute {
+    display: none;
   }
 }
 
@@ -1091,7 +1098,7 @@ h5,
   right: 0;
   bottom: 0;
   content: "";
-  background: rgb(10, 151, 158 , 0.8);
+  background: rgb(10, 151, 158, 0.8);
   z-index: 1;
   opacity: 0;
   visibility: hidden;
@@ -1258,7 +1265,9 @@ h5,
     padding: 1rem;
   }
 }
-#contact-me_section .card:hover svg,#contact-me_section .card:hover h4{
+
+#contact-me .card:hover svg,
+#contact-me .card:hover h4 {
   color: #47d1ae;
 }
 
@@ -1285,6 +1294,7 @@ h5,
     flex-wrap: nowrap !important;
     justify-content: center !important;
   }
+
   .footer-section .col-md-1 {
     flex: 0 1 auto !important;
     max-width: none !important;
@@ -1294,19 +1304,21 @@ h5,
 
 /* Same but for Contact-me section */
 @media screen and (max-width: 767px) {
-  #contact-me_section {
+  #contact-me {
     display: flex !important;
     flex-direction: row !important;
     flex-wrap: wrap !important;
     justify-content: center !important;
     gap: 12px;
   }
-  #contact-me_section > .col-sm-4 {
+
+  #contact-me>.col-sm-4 {
     flex: 0 1 45% !important;
     max-width: 180px !important;
     width: 100% !important;
   }
-  #contact-me_section .card {
+
+  #contact-me .card {
     max-width: 170px !important;
     min-width: 140px !important;
     margin: auto;
@@ -1421,8 +1433,13 @@ h5,
 }
 
 @keyframes marquee {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
 @media (max-width: 768px) {
@@ -1508,75 +1525,4 @@ h5,
 
 .project-links a:hover {
   color: #076b70;
-}
-
-/* Modern Certificates Grid */
-.certificates-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 1.5rem;
-  padding: 1rem 0;
-}
-
-.certificate-item {
-  position: relative;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
-  display: block;
-}
-
-.certificate-item img {
-  width: 100%;
-  height: 250px;
-  object-fit: cover;
-  transition: transform 0.5s ease;
-  display: block;
-}
-
-.certificate-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(10, 151, 158, 0.85);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  text-align: center;
-  padding: 1.5rem;
-}
-
-.certificate-item:hover .certificate-overlay {
-  opacity: 1;
-}
-
-.certificate-item:hover img {
-  transform: scale(1.1);
-}
-
-.certificate-overlay h3 {
-  color: #ffffff;
-  font-weight: 800;
-  font-size: 1.2rem;
-  margin-bottom: 0.5rem;
-  transform: translateY(20px);
-  transition: transform 0.3s ease;
-}
-
-.certificate-overlay span {
-  color: rgba(255, 255, 255, 0.8);
-  font-size: 0.9rem;
-  font-weight: 600;
-  transform: translateY(20px);
-  transition: transform 0.3s ease 0.1s;
-}
-
-.certificate-item:hover .certificate-overlay h3,
-.certificate-item:hover .certificate-overlay span {
-  transform: translateY(0);
 }
